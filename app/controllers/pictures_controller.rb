@@ -5,6 +5,14 @@ class PicturesController < ApplicationController
   # GET /pictures.json
   def index
     @pictures = Picture.all
+    url   = "https://www.pinterest.com/search/pins/?q=food"
+    response = HTTParty.get url
+    dom   = Nokogiri::HTML(response.body)
+    @result = []
+    dom.css('._0._3i._45 a img').map do |pin|
+      img = pin.attr('src')
+      @result.push(img)
+    end
   end
 
   # GET /pictures/1
