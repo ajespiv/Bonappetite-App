@@ -23,3 +23,10 @@
 
 <br>
 <%= link_to 'New Picture', new_picture_path %>
+<% @result.each do |img| %>
+<div class="">
+  <img src='<%= img %>'/>
+</div>
+
+</div>
+<% end %>
