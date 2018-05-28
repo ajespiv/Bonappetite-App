@@ -2,6 +2,8 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
+  padding: 0em 10em 0 10em;
+  margin: 0em 10em 0 10em;
 }
 
 body, p, ol, ul, td {
@@ -9,6 +11,7 @@ body, p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
+
 
 pre {
   background-color: #eee;
@@ -22,11 +25,6 @@ a {
 
 a:visited {
   color: #666;
-}
-
-a:hover {
-  color: #fff;
-  background-color: #000;
 }
 
 th {
