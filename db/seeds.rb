@@ -7,7 +7,3 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Picture.create(title: "Title", url: "http://www.marisol-saona.com/uploads/1/0/8/9/10896084/dsc-0678.jpg")
 Picture.create(title: "Title", url: "https://content.emarket.pe/uploads/sites/22/2015/02/1400000016240-400x240.jpg")
-# Picture.new(title: "Title", url: "http://www.marisol-saona.com/uploads/1/0/8/9/10896084/dsc-0678.jpg")
-# Picture.new(title: "Title", url: "http://www.marisol-saona.com/uploads/1/0/8/9/10896084/dsc-0678.jpg")
-# Picture.new(title: "Title", url: "http://www.marisol-saona.com/uploads/1/0/8/9/10896084/dsc-0678.jpg")
-# Picture.new(title: "Title", url: "http://www.marisol-saona.com/uploads/1/0/8/9/10896084/dsc-0678.jpg")
