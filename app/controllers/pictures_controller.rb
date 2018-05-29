@@ -5,19 +5,25 @@ class PicturesController < ApplicationController
   # GET /pictures.json
   def index
     @pictures = Picture.all
-    url   = "https://www.pinterest.com/search/pins/?q=food"
-    response = HTTParty.get url
-    dom   = Nokogiri::HTML(response.body)
-    @result = []
-    dom.css('._0._3i._45 a img').map do |pin|
-      img = pin.attr('src')
-      @result.push(img)
-    end
+    # @my_array = []
+    # @pictures.each do |picture|
+    #   @my_array << picture.id
+
+    # url   = "https://www.pinterest.com/search/pins/?q=food"
+    # response = HTTParty.get url
+    # dom   = Nokogiri::HTML(response.body)
+    # @result = []
+    # dom.css('._0._3i._45 a img').map do |pin|
+    #   img = pin.attr('src')
+    #   @result.push(img)
+    # end
   end
 
   # GET /pictures/1
   # GET /pictures/1.json
   def show
+
+
   end
 
   # GET /pictures/new
@@ -33,6 +39,7 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = Picture.new(picture_params)
+    # @picture.user_stamp = session[:id]
 
     respond_to do |format|
       if @picture.save

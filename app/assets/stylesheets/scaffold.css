@@ -2,6 +2,8 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
+  padding: 0em 10em 0 10em;
+  margin: 0em 10em 0 10em;
 }
 
 body, p, ol, ul, td {
@@ -9,6 +11,7 @@ body, p, ol, ul, td {
   font-size: 13px;
   line-height: 18px;
 }
+
 
 pre {
   background-color: #eee;
@@ -22,11 +25,6 @@ a {
 
 a:visited {
   color: #666;
-}
-
-a:hover {
-  color: #fff;
-  background-color: #000;
 }
 
 th {
@@ -77,4 +75,33 @@ div.actions {
 
 label {
   display: block;
+}
+
+.heading h1{
+  font-family: 'Allura', cursive;
+  font-weight: bold;
+  color: #3da3b8;
+  font-size: 6rem;
+  padding: 25px 0;
+
+}
+
+.heading img {
+  width: 250px;
+}
+
+.heading {
+  justify-content: center;
+  display: flex;
+align-items: center;
+}
+
+nav.navbar {
+  padding: 20px 0;
+  border-radius: 15px;
+
+}
+
+.navbar a {
+    font-size: 1.3rem;
 }
