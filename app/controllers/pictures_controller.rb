@@ -39,7 +39,7 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = Picture.new(picture_params)
-    # @picture.user_stamp = session[:id]
+    # @picture.user_stamp = session[:id]?????????
 
     respond_to do |format|
       if @picture.save
