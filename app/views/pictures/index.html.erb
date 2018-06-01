@@ -8,15 +8,26 @@
 
 
 <% @pictures.each do |pic| %>
-<%= link_to pic do %>
+  <%= link_to pic do %>
   <%=  image_tag pic.url, :class => "myclass", :style => "border-radius:20px;
-  height:250px;width:350px; padding: 5px 0; margin-left: 30px;"  %>
-  <!-- <%= p pic.url %> -->
+  height:250px;width:350px; padding: 5px 0; margin-left: 70px;"  %>
+
   <% end %>
-  <% end  %>
+  <% end %>
 
 
 
 
 
 <%= render 'modal' %>
+
+
+<h1>Pictures</h1>
+
+
+  <%# @my_array.each do |pic| %>
+<%#= image_tag pic, :class => "myclass", :style => "border-radius:20px; height:200px;width:300px"  %>
+<%# end %>
+<%# @pictures.each do |pic| %>
+<%#= image_tag pic.url, :class => "myclass", :style => "border-radius:20px; height:200px;width:300px"  %>
+<%# end %>

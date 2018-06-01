@@ -85,6 +85,8 @@ class PicturesController < ApplicationController
       end
     end
 
+
+
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_picture
@@ -95,4 +97,5 @@ class PicturesController < ApplicationController
       def picture_params
         params.require(:picture).permit(:description, :url)
       end
+
 end
