@@ -4,14 +4,13 @@
     <title>Bon Apetit</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
   <body>
       <div>
@@ -28,18 +27,25 @@
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
           </li>
+          <% if session[:user_id] %>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Share Your Food</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#"><%= link_to 'Upload Image', new_picture_path %></a>
-              <a class="dropdown-item" href="#">Upload Video</a>
-              <a class="dropdown-item" href="#">Make a Meme</a>
+              <a class="dropdown-item" href="#"><%= link_to 'Upload Image', new_picture_path, id: 'upload', remote: true %></a>
+              <!-- <a class="dropdown-item" href="#">Upload Video</a>
+              <a class="dropdown-item" href="#">Make a Meme</a> -->
             </div>
+          </li>
+          <li class="nav-item">
+
           </li>
           <li class="nav-item">
             <%= link_to "Log out", logout_path, method: "delete", :class=> "nav-link" %>
           </li>
+              <% end %>
+
         </ul>
       </div>
     </nav>

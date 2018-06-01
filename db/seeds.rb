@@ -5,8 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Picture.destroy_all
+User.destroy_all
 
-Picture.create(description: "omg soo good", url: "https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170802151244-nyc-restaurants-in-miami-scarpetta-table.jpg")
+["Alexis", "Joel", "Tushani"].each do |name|
+  User.create(username: name, password: "abc123", password_confirmation: "abc123")
+end
+
+
+Picture.create(user_id: 1, description: "omg soo good", url: "https://dynaimage.cdn.cnn.com/cnn/q_auto,w_602,c_fill,g_auto,h_339,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170802151244-nyc-restaurants-in-miami-scarpetta-table.jpg")
 Picture.create(description: "yessss", url: "https://i.ytimg.com/vi/_dqlygURk8k/hqdefault.jpg")
 Picture.create(description: "love Miami food", url: "http://www.thebrunettediaries.com/wp-content/uploads/2015/03/Mock-Shirley-Temple.jpg")
 Picture.create(description: "ohh yessss", url: "https://www.telegraph.co.uk/content/dam/food-and-drink/2016/05/20/whiskycocktail-xlarge_trans_NvBQzQNjv4BqpJliwavx4coWFCaEkEsb3kvxIt-lGGWCWqwLa_RXJU8.jpg")

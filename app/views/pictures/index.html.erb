@@ -8,12 +8,15 @@
 
 
 <% @pictures.each do |pic| %>
-
+<%= link_to pic do %>
   <%=  image_tag pic.url, :class => "myclass", :style => "border-radius:20px;
   height:250px;width:350px; padding: 5px 0; margin-left: 30px;"  %>
   <!-- <%= p pic.url %> -->
   <% end %>
+  <% end  %>
 
 
 
-<%= link_to 'New Picture', new_picture_path %>
+
+
+<%= render 'modal' %>
