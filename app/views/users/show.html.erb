@@ -1,0 +1,10 @@
+<h1><%= (@user.username).capitalize %>'s Pictures</h1>
+
+
+
+  <% @user.pictures.each do |picture| %>
+  <p class="description"><strong>Description:</strong><%= picture.description  %></p> <br>
+  <%= image_tag(picture.url)%> <br>
+
+<hr>
+<% end %>
