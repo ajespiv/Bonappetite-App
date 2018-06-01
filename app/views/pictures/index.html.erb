@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<<<<<<< HEAD
 <div class="heading">
   <%= link_to image_tag "logo/logo.jpg" %>
   <h1>Bon Appetit!</h1>
@@ -20,3 +21,36 @@
 
 
 <%= render 'modal' %>
+=======
+
+<h1>Pictures</h1>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pictures.each do |picture| %>
+      <tr>
+        <td><%= picture.title %></td>
+        <td><%= picture.url %></td>
+        <td><%= link_to 'Show', picture %></td>
+        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
+        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> -->
+  <% @my_array.each do |pic| %>
+<%= image_tag pic, :class => "myclass", :style => "border-radius:20px; height:200px;width:300px"  %>
+<% end %>
+<% @pictures.each do |pic| %>
+<%= image_tag pic.url, :class => "myclass", :style => "border-radius:20px; height:200px;width:300px"  %>
+<!-- <%= p pic.url %> -->
+<% end %>
+>>>>>>> dfeea1ced239f28dcf33a55db27b5ef71bd42890

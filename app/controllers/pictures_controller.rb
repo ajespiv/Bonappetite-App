@@ -4,6 +4,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures
   # GET /pictures.json
+<<<<<<< HEAD
     def index
       @pictures = Picture.all
       # @my_array = []
@@ -23,6 +24,51 @@ class PicturesController < ApplicationController
 
     def dash
 
+=======
+  def index
+    @pictures = Picture.all
+    @my_array = []
+    Dir.chdir(Rails.root + 'app/assets/images')
+    @my_array = Dir.glob("*")
+  #   url   = "https://www.pinterest.com/search/pins/?q=food"
+  #   response = HTTParty.get url
+  #   dom   = Nokogiri::HTML(response.body)
+  #   @result = []
+  #   dom.css('._0._3i._45 a img').map do |pin|
+  #     img = pin.attr('src')
+  #     @result.push(img)
+  #   end
+
+end
+
+  # GET /pictures/1
+  # GET /pictures/1.json
+  def show
+  end
+
+  # GET /pictures/new
+  def new
+    @picture = Picture.new
+  end
+
+  # GET /pictures/1/edit
+  def edit
+  end
+
+  # POST /pictures
+  # POST /pictures.json
+  def create
+    @picture = Picture.new(picture_params)
+
+    respond_to do |format|
+      if @picture.save
+        format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
+        format.json { render :show, status: :created, location: @picture }
+      else
+        format.html { render :new }
+        format.json { render json: @picture.errors, status: :unprocessable_entity }
+      end
+>>>>>>> dfeea1ced239f28dcf33a55db27b5ef71bd42890
     end
 
 
@@ -75,6 +121,7 @@ class PicturesController < ApplicationController
       end
     end
 
+<<<<<<< HEAD
     # DELETE /pictures/1
     # DELETE /pictures/1.json
     def destroy
@@ -95,4 +142,6 @@ class PicturesController < ApplicationController
       def picture_params
         params.require(:picture).permit(:description, :url)
       end
+=======
+>>>>>>> dfeea1ced239f28dcf33a55db27b5ef71bd42890
 end

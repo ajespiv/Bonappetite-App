@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+<<<<<<< HEAD
 
 Picture.destroy_all
 User.destroy_all
@@ -61,3 +62,7 @@ Picture.create(description: "Title", url: "https://purewow-prodstatics3azcdn.azu
 Picture.create(description: "Title", url: "https://static.urbandaddy.com/uploads/assets/image/articles/standard/4cfe509b47963aedebe9d99b1359e39b.jpg", user: User.all.sample)
 Picture.create(description: "Title", url: "http://www.miamiindulge.com/wp-content/uploads/sites/4/2017/07/2-mandolin_7527-767x1024.jpg", user: User.all.sample)
 Picture.create(description: "Title", url: "https://scontent.cdninstagram.com/vp/3fc0493244df186a651dcbf152677725/5B9E535A/t51.2885-15/sh0.08/e35/p640x640/33115192_397317837338682_2725613751012163584_n.jpg", user: User.all.sample)
+=======
+Picture.create(title: "Title", url: "http://www.marisol-saona.com/uploads/1/0/8/9/10896084/dsc-0678.jpg")
+Picture.create(title: "Title", url: "https://content.emarket.pe/uploads/sites/22/2015/02/1400000016240-400x240.jpg")
+>>>>>>> dfeea1ced239f28dcf33a55db27b5ef71bd42890

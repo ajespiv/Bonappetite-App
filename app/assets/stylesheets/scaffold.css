@@ -13,6 +13,7 @@ body, p, ol, ul, td {
 }
 
 
+<<<<<<< HEAD
 
 .description {
   font-size: 1rem;
@@ -61,6 +62,8 @@ border-radius: 5px;
 
 }
 
+=======
+>>>>>>> dfeea1ced239f28dcf33a55db27b5ef71bd42890
 pre {
   background-color: #eee;
   padding: 10px;
